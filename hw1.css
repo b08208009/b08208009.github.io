@@ -1,0 +1,32 @@
+.navbar-dark .navbar-brand {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.bg-dark {
+    background-color: #16324F!important;
+}
+
+.gmark{
+    font-size: 0.7cm;
+}
+
+.bmark{
+    font-size: 0.9cm;
+    background-color: #1f60a7;
+    color: #fff;
+    padding-left: 20px;
+    
+}
+
+.all{
+    width: 100%;
+}
+
+.head{
+    font-size: 0.5cm;
+}
+
+main{
+    width: 100%;
+}
