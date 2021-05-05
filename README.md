@@ -5,9 +5,9 @@
 最後，使用聯絡欄功能與footer放上以己的連絡方式與馬上互動，並放上NAVbar，點擊上方字塊，即可以跳到想去的地方，如果點擊名字，則可以跳回最上方，就這樣，完成一個接近完整的個人申請網站!
 
 使用templete：
-https://getbootstrap.com/docs/5.0/getting-started/introduction/ 運用裡面功能的navbar、圖片輪播
-https://chiayi-lin.github.io/ 運用原本的圖卡的功能，但是我簡化成圖片、文字的圖卡，沒有使用原本的animation
-https://github.com/JerryLin-0906/Self-introduction/blob/master/index.html 運用footer與下方contact me的聯絡欄功能，並參考他的排版並加以改良成現在的樣子。
-其他排版皆是以自己寫成，若略顯陽春敬請見諒！！
+# https://getbootstrap.com/docs/5.0/getting-started/introduction/ 運用裡面功能的navbar、圖片輪播
+# https://chiayi-lin.github.io/ 運用原本的圖卡的功能，但是我簡化成圖片、文字的圖卡，沒有使用原本的animation
+# https://github.com/JerryLin-0906/Self-introduction/blob/master/index.html 運用footer與下方contact me的聯絡欄功能，並參考他的排版並加以改良成現在的樣子。
+# 其他排版皆是以自己寫成，若略顯陽春敬請見諒！！
 
 
