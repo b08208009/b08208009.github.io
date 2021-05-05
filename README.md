@@ -83,7 +83,7 @@
 
 
 
-<div class="row">
+        <div class="row">
                 <div class="col twocol"style="padding-left: 10vw">
                     <div style="background-image: url(myphoto4.jpg);background-repeat: no-repeat;display: -ms-flex;background-size: 500px;height: 556px"></div>
                 </div>
@@ -116,9 +116,9 @@
 
 
 
-<div class="col-md-6 col-lg-4 d-flex ftco-animate fadeInUp ftco-animated">
+        <div class="col-md-6 col-lg-4 d-flex ftco-animate fadeInUp ftco-animated">
                     <div class="blog-entry justify-content-end">
-                        <div class="project img ftco-animate d-flex justify-content-center align-items-center fadeInUp ftco-animated" style="background-image: url(images/project-1.png);">
+                        <div class="project img ftco-animate d-flex justify-content-center align-items-center fadeInUp ftco-animated" style="background-image:     url(images/project-1.png);">
                             <div class="overlay"></div>
                             <div class="text text-center p-4">
                                 <h3><a href="https://github.com/ChiaYi-LIN/Computer-Programming/tree/main/Final%20Project" target="_blank">2D Game Design</a></h3>
