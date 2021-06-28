@@ -1,0 +1,37 @@
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 9px 12px;
+    background-color: #dd4e43;
+    border-radius: 5px;
+    width: 307.24px;
+    height: auto;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: rgb(223, 173, 173);
+  }
+  
+  /* Add a dark background to the active button */
+
+
+  .font{
+      font-weight: bold;
+  }
+
+  .demo2-bg{
+    background-color: rgb(250, 221, 177);
+    background-size: cover;
+    position: relative;
+    border-radius: 5px;
+}
+
+.demo2{
+    position: absolute;
+    background:rgba(255,255,255,0.3);
+}
+
