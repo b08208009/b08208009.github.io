@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <link rel="stylesheet" href="前端期末.css">
+    <link rel="stylesheet" href="hw1.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
+</head>
+
+<body style="background-color: #f1f1f1;">
+    <div class="container-fluid row demo2-bg" style="height: 350px; margin: 10px;padding: 10px ;width: auto">
+        <div class="col twocol" style="width: auto;height: auto; margin-left: 20px;margin-top: 5px;">
+            <div style="font-size: large; "> 
+                <h2 style="font-weight: 900;">正餐選擇產生器</h2>
+            </div>
+            <div style="padding: 10px;"></div>
+            <div class="font" style="margin-bottom: 10px;">
+                給那些不知道要吃甚麼東西當作正餐的人：<br>
+                是否覺得每天都不知道要吃什麼？<br>
+                感覺要吃什麼是人生中最大的問題，與同學在原地不知所措？<br>
+            </div>
+            <div class="font">
+                那麼請使用這個正餐決定器，您不用想要吃什麼樣的食物(反正你也想不到)，只要選擇你處在的區域與願意距離，就可以快速決定一餐 ~ ~ ~
+            </div>
+            <div align="left" style="margin-top: 10px;">
+                <button class="btn font"  onclick="goToAnchor('selector')">GET STARTED!!!</button>
+            </div>
+        </div>
+        <div class="col twocol" style="padding-top: 7.5px; margin-left: 35px;">
+            <img src="113.png" alt="123" style="height: 150px;width: 262.5px; border-radius: 5px;">
+            <div style="padding-top: 20px;"></div>
+            <img src="112.png" alt="143" style="height: 150px;width: 262.5px; border-radius: 5px;">
+        </div>  
+    </div>
+
+    <a name="selector"></a>
+    <a name="back"></a>
+    <div style="width: auto;height: auto;padding: 10px;border-radius: 5px;margin: 10px;background-color: rgb(250, 221, 177);">
+        <div></div>
+        <div align="center" class="font ">你在校園中的哪裡呢？</div>
+        <div style="height: 10px;"></div>
+        <div align="center" style="border:1px black solid;padding: 10px;margin: 10px;border-radius: 5px;">
+            <button class="btn font" onclick=" b = 1"> 新體、博雅(新生南路、辛亥路側)</button>
+            <button class="btn font" onclick=" b = 2"> 公館商圈、大一女(羅斯福路、汀州路側)</button>
+            <div style="height: 5px;"></div>
+            <button class="btn font" onclick=" b = 3"> 社科院、法學院(辛亥路側)</button>
+            <button class="btn font" onclick=" b = 4"> 明達館、宿舍區(基隆路、長興街側)</button>
+        </div>
+            <div style="height: 10px;"></div>
+            <div align="center" class="font ">願意移動到怎樣的時間、距離呢？(以走路計算)</div>
+            <div style="height: 10px;"></div>
+        <div align="center" style="border:1px black solid ;padding: 10px;margin: 10px;border-radius: 5px;">
+            <div>
+                <button  class="btn font" onclick="a = 100" > 3分鐘以內 (100(m))</button>
+                <button  class="btn font" onclick="a = 500" > 8分鐘以內 (500(m))</button>
+                <div style="height: 5px;"></div>
+                <button  class="btn font" onclick="a = 1000" > 15分鐘以內 (1000(m))</button>
+                <button  class="btn font" onclick="a = 2000" > 20分鐘以上 (2000(m))</button>
+            </div>
+
+            <div style="height: 30px;"></div>
+            <div>
+                <div><button class="btn font" onclick="red(a,b);goToAnchor('flo');map(L.map('mapid'));"> 開始</button></div>
+            </div>
+        </div>
+    </div>
+
+    <a name="flo"></a>
+    <div style="height: 20px;"></div>
+    <div style="width: auto;height: auto;padding: 10px;border-radius: 5px;margin: 10px;background-color: rgb(250, 221, 177);">
+        <div align="center" class="font" >
+            抽籤結果
+        </div>
+        <div style="height: 10px;"></div>
+        <div id="math" class="font" align="center"></div>
+        <div style="height: 10px;"></div>
+        <div align="center"><button id="re" class="btn font" onclick= "goToAnchor('back');"> 移除結果 </button></div>
+    </div>
+
+    <div style="margin: 20px;"> </div>
+    <div style="margin: 10px; border-radius: 5px;border:1px black solid ">
+        <div id="mapid" style="width: auto;height: 200px; border-radius: 5px;"></div>
+    </div>
+
+
+    <div class="all" style="margin: 10px;">
+        <footer class="page-footer font-small stylish-color-dark pt-4" style="background-color:rgb(250, 221, 177);position: relative;border-radius: 3px;">
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+                <!-- Grid row -->
+                <div class="row" style="display: flex;margin-left: 20px;">
+
+                    <!-- Grid column -->
+                    <div class="col mx-auto" style="padding-top: 15px;">
+                    <!-- Content -->
+                        <div class="font" align="left" style="font-size: 0.4cm;color: black;padding-left: 20px;">雖然只是一個小小而簡單的網頁，<br>如果想讓這個網頁變的更好，<br>請聯絡我，想餐點無煩惱！</div>
+                        <div align="left" style="height:50px;padding-top: 20px;margin-left: 20px;">
+                            <a href="https://www.facebook.com/profile.php?id=100004489987970"><img src="facebook.png" style="width: 40px;"></a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col mx-auto" style="display: flex;">
+                    <!-- Links -->
+                        <div style="padding-right: 80px;">
+                            <h6 class="font-weight-bold text-uppercase mt-3 mb-4 font" style="font-size: larger;color: black">若有新的想法請聯絡我!</h6>
+                            <ul>
+                                <li>
+                                    <p class="font" align="left" style="font-size: small;color: black">Email: B08208009@ntu.edu.tw</p>
+                                </li>
+                                <li>
+                                    <p class="font"  align="left" style="font-size: small;color: black">My address: Zhudong Town 310, Taiwan</p>
+                                </li>
+                            </ul>
+                        </div>
+                            <!-- Social buttons -->
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="color: black">© 2021 Copyright:
+                 Fu-Ping made with bootstrap and W3cschool
+            </div>
+        </footer>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>        
+    <script src="final.js"></script> 
+</body>
+</html>
